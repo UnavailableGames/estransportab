@@ -6,71 +6,121 @@
   <title>ES Transport AB</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #d62828;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --accent: #f77f00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #1a1a1a;
+      background-color: var(--dark);
       color: white;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
       margin: 0;
       font-size: 28px;
     }
+
     nav a {
       color: white;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be') center/cover no-repeat;
+      color: white;
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     section {
       padding: 60px 40px;
       max-width: 1000px;
       margin: auto;
     }
-    .hero {
-      background: url('https://media.discordapp.net/attachments/864695826852216862/1396497662810787850/transportcentralen-handla-webbutik.png?ex=687e4d4c&is=687cfbcc&hm=41c43f324b78c5324f849eb3a3babc34ca912010c518671b3b2e763d257bcfc8&=&format=webp&quality=lossless&width=839&height=559') center/cover no-repeat;
-      color: white;
-      padding: 100px 40px;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 36px;
+
+    h2 {
+      font-size: 32px;
       margin-bottom: 20px;
     }
-    .hero p {
-      font-size: 18px;
-    }
+
     form input, form textarea {
       display: block;
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-top: 10px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-size: 16px;
     }
+
     form button {
-      background-color: #1a1a1a;
+      background-color: var(--primary);
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
     }
+
+    form button:hover {
+      background-color: #b71c1c;
+    }
+
     footer {
-      background-color: #1a1a1a;
+      background-color: var(--dark);
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 14px;
+      margin-top: 40px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -86,35 +136,43 @@
 
   <div class="hero">
     <h2>Pålitliga Transporter i Hela Sverige</h2>
-    <p>Snabba leveranser, moderna fordon och ett personligt bemötande.</p>
+    <p>Snabba leveranser, moderna fordon och ett personligt bemötande – vi kör på ditt förtroende.</p>
   </div>
 
   <section id="tjanster">
     <h2>Våra Tjänster</h2>
-    <p>Vi erbjuder professionella transportlösningar för företag och privatpersoner. Oavsett om det gäller fjärrtransporter, budkörningar eller specialtransporter – vi har lösningen.</p>
+    <p>Vi specialiserar oss på kranbilstransporter med lastväxlare och erbjuder flexibla lösningar för både företag och privatpersoner. Med modern utrustning och erfaren personal hanterar vi uppdrag säkert och effektivt.</p>
+    <ul>
+      <li>Kranbilstransporter med lastväxlare</li>
+      <li>Containerkörningar och avfallshantering</li>
+      <li>Materialleveranser till byggarbetsplatser</li>
+    </ul>
   </section>
 
   <section id="jobb">
     <h2>Jobba hos oss</h2>
-    <p>Är du en duktig chaufför med C- eller CE-behörighet? Skicka in en spontanansökan nedan så hör vi av oss!</p>
+    <p>Vill du vara en del av ett växande och engagerat transportteam? Vi söker löpande efter kompetenta förare med C- eller CE-behörighet.</p>
     <form>
       <input type="text" name="namn" placeholder="Namn" required>
       <input type="email" name="email" placeholder="E-post" required>
       <input type="text" name="telefon" placeholder="Telefonnummer">
-      <textarea name="meddelande" rows="4" placeholder="Kort om dig själv"></textarea>
+      <textarea name="meddelande" rows="4" placeholder="Berätta lite om dig själv och varför du vill jobba hos oss"></textarea>
       <button type="submit">Skicka ansökan</button>
     </form>
   </section>
 
   <section id="kontakt">
     <h2>Kontakt</h2>
-    <p>Har du frågor eller vill boka transport? Tveka inte att höra av dig.</p>
-    <p>E-post: kontakt@estransport.se</p>
-    <p>Telefon: 070-123 45 67</p>
+    <p>Har du frågor, vill boka transport eller bara säga hej? Välkommen att höra av dig.</p>
+    <div class="contact-info">
+      <p><strong>E-post:</strong> estransporthalmstad@gmail.com</p>
+      <p><strong>Telefon:</strong> 000-000 00 00</p>
+      <p><strong>Adress:</strong> Gjutaregatan 7, 302 62 Halmstad</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 ES Transport AB. All rights reserved.
+    &copy; 2025 ES Transport AB. Alla rättigheter förbehållna.
   </footer>
 </body>
 </html>
