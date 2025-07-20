@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES Transport AB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be') center/cover no-repeat;
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ES Transport AB</h1>
+    <nav>
+      <a href="#tjanster">Tjänster</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#jobb">Jobba hos oss</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Pålitliga Transporter i Hela Sverige</h2>
+    <p>Snabba leveranser, moderna fordon och ett personligt bemötande.</p>
+  </div>
+
+  <section id="tjanster">
+    <h2>Våra Tjänster</h2>
+    <p>Vi erbjuder professionella transportlösningar för företag och privatpersoner. Oavsett om det gäller fjärrtransporter, budkörningar eller specialtransporter – vi har lösningen.</p>
+  </section>
+
+  <section id="jobb">
+    <h2>Jobba hos oss</h2>
+    <p>Är du en duktig chaufför med C- eller CE-behörighet? Skicka in en spontanansökan nedan så hör vi av oss!</p>
+    <form>
+      <input type="text" name="namn" placeholder="Namn" required>
+      <input type="email" name="email" placeholder="E-post" required>
+      <input type="text" name="telefon" placeholder="Telefonnummer">
+      <textarea name="meddelande" rows="4" placeholder="Kort om dig själv"></textarea>
+      <button type="submit">Skicka ansökan</button>
+    </form>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Har du frågor eller vill boka transport? Tveka inte att höra av dig.</p>
+    <p>E-post: kontakt@estransport.se</p>
+    <p>Telefon: 070-123 45 67</p>
+  </section>
+
+  <footer>
+    &copy; 2025 ES Transport AB. All rights reserved.
+  </footer>
+</body>
+</html>
